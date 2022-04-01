@@ -1,0 +1,21 @@
+{
+  "alunos": [
+    {
+      "name": "Ana Júlia",
+      "age": "1",
+      "contact": "(83) 99999-9999",
+      "date": "2018-02-05",
+      "email": "anajulia@email.com",
+      "id": 1
+    }
+  ],
+  "admin": [
+    {
+      "name": "Yasmin Alves",
+      "contact": "(83) 99999-9999",
+      "email": "yasilvalves@gmail.com",
+      "password": "admin-123456",
+      "id": 1
+    }
+  ]
+}

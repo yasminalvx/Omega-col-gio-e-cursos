@@ -1,0 +1,67 @@
+<h4 *ngIf="!isEdit" >Adicione um aluno</h4>
+<h4 *ngIf="isEdit" >Editar aluno</h4>
+
+<form class="row g-3" #form="ngForm" [formGroup]="formStudent">
+
+  <!-- Nome -->
+  <div class="col-sm-12">
+    <label for="name" class="form-label">Nome</label>
+    <input id="name" type="text" class="form-control" id="name" formControlName="name" [ngClass]="isValid('name')">
+    <p *ngIf="!formStudent.controls.name.valid"  [ngClass]="formStudent.controls.name.valid ? '' : 'invalid-feedback'"> Nome tem que ter entre 6 e 60 caracteres. </p>
+  </div>
+
+  <!-- Idade -->
+  <div class="col-sm-12">
+    <label for="age" class="form-label">Idade</label>
+    <input type="text" class="form-control" id="age" formControlName="age" [ngClass]="isValid('age')">
+    <p *ngIf="!formStudent.controls.age.valid"  [ngClass]="formStudent.controls.age.valid ? '' : 'invalid-feedback'"> O aluno deve ter no mínimo 4 anos no ano vigente e no máximo 18 anos. </p>
+  </div>
+
+  <!-- Data de Nascimento -->
+  <div class="col-sm-12">
+    <label for="date" class="form-label">Data de Nascimento</label>
+    <input type="date" class="form-control" id="date" formControlName="date" (keyup)="onKeyUp($event)" [ngClass]="isValid('date')">
+    <p *ngIf="!formStudent.controls.date.valid"  [ngClass]="formStudent.controls.date.valid ? '' : 'invalid-feedback'"> O aluno deve ter no mínimo 4 anos no ano vigente e no máximo 18 anos. </p>
+  </div>
+
+  <!-- Email -->
+  <div class="col-sm-12">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email" (keyup)="onKeyUp($event)" [ngClass]="isValid('email')">
+    <p *ngIf="!formStudent.controls.email.valid"  [ngClass]="formStudent.controls.email.valid ? '' : 'invalid-feedback'"> Email inválido </p>
+  </div>
+
+  <!-- Contato -->
+  <div class="col-sm-12">
+    <label for="contact" class="form-label">Contato</label>
+    <input type="text" class="form-control" id="contact" formControlName="contact" (keyup)="onKeyUp($event)" [ngClass]="isValid('contact')">
+  </div>
+
+  <button *ngIf="!isEdit" class="btn btn-primary col-sm-2 ms-2 mt-4" type="submit" (click)="onClick()">Cadastrar</button>
+  <button *ngIf="isEdit" class="btn btn-primary col-sm-2 ms-2 mt-4" type="submit" (click)="onEdit()">Salvar</button>
+
+</form>
+<!--
+<p>
+  {{ formStudent.value | json }}
+</p>
+
+<p>
+  Nome: {{ formStudent.controls.name.valid }}
+</p>
+<p>
+  Idade: {{ formStudent.controls.age.valid }}
+</p>
+<p>
+  Contato: {{ formStudent.controls.contact.valid }}
+</p>
+<p>
+  Data: {{ formStudent.controls.date.valid }}
+</p>
+<p>
+  Email: {{ formStudent.controls.email.valid }}
+</p>
+
+<p>
+  Formulário: {{ formStudent.valid }}
+</p> -->
