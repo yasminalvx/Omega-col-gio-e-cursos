@@ -4,5 +4,6 @@ export interface Student {
   age: number,
   contact: string,
   date: Date,
-  email: string
+  email: string,
+  password: string
 }

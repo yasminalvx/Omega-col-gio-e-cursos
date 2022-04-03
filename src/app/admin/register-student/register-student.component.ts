@@ -32,13 +32,14 @@ export class RegisterStudentComponent implements OnInit {
       age: [null, [Validators.required, Validator.ValidaAge]],
       contact: [null, [Validators.required, Validator.ValidaContact]],
       date: [null, [Validators.required, Validator.validaDate]],
-      email: [null, [Validators.required, Validators.email]]
+      email: [null, [Validators.required, Validators.email]],
+      password: [null, [Validators.required ,Validators.minLength(8), Validators.maxLength(12)]]
     });
 
     let urlActive = this.route.url;
     if (urlActive.includes('edit') == true) {
       this.isEdit = true;
-      this.IdStudent = parseInt(urlActive.replace('/admin/edit/', ''));
+      this.IdStudent = parseInt(urlActive.replace('/alunos/edit/', ''));
       this.updateForm(this.IdStudent);
     }
 
@@ -54,6 +55,7 @@ export class RegisterStudentComponent implements OnInit {
         this.formStudent.controls['contact'].setValue(data.contact);
         this.formStudent.controls['date'].setValue(data.date);
         this.formStudent.controls['email'].setValue(data.email);
+        this.formStudent.controls['password'].setValue(data.password);
       }
     )
   }
@@ -64,7 +66,7 @@ export class RegisterStudentComponent implements OnInit {
       student.id = data.length + 1;
       this.studentService.createStudent(student)
       .subscribe(
-        success => this.route.navigate(['admin']),
+        success => this.route.navigate(['alunos']),
         error => console.error()
         );
     });
@@ -81,7 +83,7 @@ export class RegisterStudentComponent implements OnInit {
 
     this.studentService.updateStudent(student)
     .subscribe(
-      success => this.route.navigate(['admin']),
+      success => this.route.navigate(['alunos']),
       error => console.error()
     )
   }

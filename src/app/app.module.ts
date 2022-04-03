@@ -10,6 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterStudentComponent } from './admin/register-student/register-student.component';
 import { LoginModule } from './login/login.module';
 import { LoginComponent } from './login/login.component';
+import { StudentsComponent } from './admin/students/students.component';
+import { TeacherComponent } from './admin/teacher/teacher.component';
+import { RegisterTeacherComponent } from './admin/register-teacher/register-teacher.component';
+import { CoursesComponent } from './courses/courses.component';
+import { RegistrationStudentComponent } from './courses/registration-student/registration-student.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     AdminComponent,
     RegisterStudentComponent,
-    LoginComponent
+    LoginComponent,
+    StudentsComponent,
+    TeacherComponent,
+    RegisterTeacherComponent,
+    CoursesComponent,
+    RegistrationStudentComponent
   ],
   imports: [
     BrowserModule,

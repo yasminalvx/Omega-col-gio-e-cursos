@@ -31,6 +31,13 @@
     <p *ngIf="!formStudent.controls.email.valid"  [ngClass]="formStudent.controls.email.valid ? '' : 'invalid-feedback'"> Email inválido </p>
   </div>
 
+  <!-- Senha -->
+  <div class="col-sm-12">
+    <label for="password" class="form-label">Senha</label>
+    <input type="password" class="form-control" id="password" formControlName="password" (keyup)="onKeyUp($event)" [ngClass]="isValid('password')">
+    <p *ngIf="!formStudent.controls.password.valid"  [ngClass]="formStudent.controls.password.valid ? '' : 'invalid-feedback'"> Senha deve ter entre 8 e 12 dígitos. </p>
+  </div>
+
   <!-- Contato -->
   <div class="col-sm-12">
     <label for="contact" class="form-label">Contato</label>

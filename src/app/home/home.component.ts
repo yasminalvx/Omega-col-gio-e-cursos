@@ -17,4 +17,12 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
+  onClick2() {
+    this.router.navigate(['login/aluno']);
+  }
+
+  onClick3() {
+    this.router.navigate(['login/professor']);
+  }
+
 }

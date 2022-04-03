@@ -1,0 +1,38 @@
+<h4>Matricule seu filho</h4>
+
+<form class="row g-3" #form="ngForm" [formGroup]="formStudent">
+
+  <!-- Nome -->
+  <div class="col-sm-12">
+    <label for="name" class="form-label">Nome</label>
+    <input id="name" type="text" class="form-control" id="name" formControlName="name" [ngClass]="isValid('name')">
+    <p *ngIf="!formStudent.controls.name.valid"  [ngClass]="formStudent.controls.name.valid ? '' : 'invalid-feedback'"> Nome tem que ter entre 6 e 60 caracteres. </p>
+  </div>
+
+  <!-- Idade -->
+  <div class="col-sm-12">
+    <label for="age" class="form-label">Idade</label>
+    <input type="text" class="form-control" id="age" formControlName="age" [ngClass]="isValid('age')">
+    <p *ngIf="!formStudent.controls.age.valid"  [ngClass]="formStudent.controls.age.valid ? '' : 'invalid-feedback'"> O aluno deve ter no mínimo 4 anos no ano vigente e no máximo 18 anos. </p>
+  </div>
+
+  <!-- Email -->
+  <div class="col-sm-12">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email" (keyup)="onKeyUp($event)" [ngClass]="isValid('email')">
+    <p *ngIf="!formStudent.controls.email.valid"  [ngClass]="formStudent.controls.email.valid ? '' : 'invalid-feedback'"> Email inválido </p>
+  </div>
+
+  <!-- Contato -->
+  <div class="col-sm-12">
+    <label for="contact" class="form-label">Contato</label>
+    <input type="text" class="form-control" id="contact" formControlName="contact" (keyup)="onKeyUp($event)" [ngClass]="isValid('contact')">
+  </div>
+
+  <button class="btn btn-primary col-sm-2 ms-2 mt-4" type="button" (click)="onClick()"> Matricula </button>
+
+</form>
+
+<div class="alert alert-secondary mt-3" role="alert" *ngIf="isSubmitted" >
+  Seu filho foi matriculado! Aguarde um e-mail para continuar com o cadastro.
+</div>

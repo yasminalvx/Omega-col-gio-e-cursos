@@ -1,0 +1,15 @@
+<div style=" display: flex; flex-direction: row; flex-wrap: wrap; background-color: red;">
+
+  <div *ngFor="let curso of courses" >
+    <div class="card m-2" style="width: 18rem;">
+      <img src="{{curso.image}}" class="card-img-top">
+      <!-- Corrigir erro: O Bloqueio de Leitura Entre Origens (CORB) bloqueou a resposta de entre origens https://unsplash.com/photos/g1Kr4Ozfoac com o tipo MIME text/html. Visite https://www.chromestatus.com/feature/5629709824032768 para mais detalhes. -->
+      <div class="card-body">
+        <h5 class="card-title"> {{ curso.name }} </h5>
+        <p class="card-text"> {{ curso.desc }} </p>
+        <p class="card-text"> Faixa Etária: {{ curso.age }} </p>
+        <a class="btn btn-primary" (click)="onClick(curso.id)"> Matricule seu filho </a>
+      </div>
+    </div>
+  </div>
+</div>

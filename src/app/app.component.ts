@@ -13,8 +13,24 @@ export class AppComponent {
   ngOnInit() {
   }
 
-  isAdmin() {
-    return this.router.url == '/admin' ? 'active': '';
+  isStudent() {
+    return this.router.url == '/alunos' ? 'active': '';
+  }
+
+  isTeacher() {
+    return this.router.url == '/professores' ? 'active': '';
+  }
+
+  isCursos() {
+    return this.router.url == '/cursos' ? 'active': '';
+  }
+
+  userAdmin() {
+    return localStorage.getItem('typeAccount') == 'admin';
+  }
+
+  userTeacher() {
+    return localStorage.getItem('typeAccount') == 'teacher';
   }
 
 
