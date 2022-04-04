@@ -1,4 +1,4 @@
-import { Student } from './../models/Student';
+import { Student } from '../shared/models/Student';
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from './services/student.service';
 import { Router } from '@angular/router';
@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   students!: Student[];
+  pending!: Student[];
+  hasPending: boolean = false;
 
 
   constructor(
@@ -18,25 +20,33 @@ export class AdminComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.loadStudents();
+    this.searchPending();
   }
 
-  loadStudents() {
-    this.studentService.getStudents()
-      .subscribe(
-        data => {
-          this.students = data;
-        }
-      )
+  async searchPending() {
+    const response = await this.studentService.getStudentsPending().toPromise();
+    response ? this.hasPending = true: false;
+    this.students = response;
   }
 
-  deleteStudent(id: number) {
-    this.studentService.deleteStudent(id).subscribe();
+  async onClick(student: Student) {
+    const response = await this.studentService.getStudents().toPromise();
+    const id = student.id;
+    student.id = response[response.length-1].id + 1;
+    const date = new Date();
+    this.createStudent(student, id);
+  }
+
+  createStudent(student: Student, id: number) {
+    this.studentService.createStudent(student).subscribe(
+      sucess => this.router.navigate([`alunos/edit/${id}`]),
+      error => console.error
+    );
+    this.studentService.deletePending(student.id).subscribe();
   }
 
   onLogout() {
     localStorage.clear();
     this.router.navigate(['']);
   }
-
 }

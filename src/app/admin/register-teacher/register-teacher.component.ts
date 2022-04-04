@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Teacher } from 'src/app/models/teacher';
+import { Teacher } from 'src/app/shared/models/teacher';
 import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { TeacherService } from '../services/teacher.service';
-import { Validator } from '../../assets/Validators';
+import { Validator } from './../../shared/Validators';
 import { ValidatorService } from '../services/validator.service';
 
 @Component({

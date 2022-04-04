@@ -1,9 +1,9 @@
 import { Router } from '@angular/router';
-import { Student } from 'src/app/models/Student';
+import { Student } from 'src/app/shared/models/Student';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { StudentService } from '../services/student.service';
-import { Validator } from '../../assets/Validators';
+import { Validator } from '../../shared/Validators';
 import { ValidatorService } from '../services/validator.service';
 
 @Component({

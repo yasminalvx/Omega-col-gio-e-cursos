@@ -1,7 +1,7 @@
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Course } from '../models/course';
+import { Course } from '../shared/models/course';
 import { retry, catchError, take } from 'rxjs/operators';
 
 @Injectable({

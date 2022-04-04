@@ -1,0 +1,39 @@
+<h4 *ngIf="isStudent">Alunos</h4>
+<h4 *ngIf="!isStudent">Professores</h4>
+
+<div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Contato</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of type">
+          <th scope="row" class="col-sm-1"> {{ student.id }} </th>
+          <td class="col-sm-4"> {{ student.name }} </td>
+          <td class="col-sm-3"> {{ student.contact }} </td>
+          <td class="col-sm-3">
+            <button class="btn btn-warning me-2 ms-3" routerLinkActive="active" routerLink="edit/{{ student.id }}">Editar</button>
+            <button class="btn btn-primary ms-3" (click)="delete(student.id)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <button class="btn btn-primary" routerLinkActivated="active" routerLink="register" *ngIf="isStudent" >Novo Aluno</button>
+      <button class="btn btn-primary" routerLinkActivated="active" routerLink="register" *ngIf="!isStudent">Novo Professor</button>
+      <button class="btn logout ms-2" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+
+  <div *ngIf="getDetails">
+
+  </div>
+</div>
+

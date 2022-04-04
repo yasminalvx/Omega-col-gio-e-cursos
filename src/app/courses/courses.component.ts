@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Course } from '../models/course';
+import { Course } from '../shared/models/course';
 import { CoursesService } from './courses.service';
 
 @Component({
@@ -22,13 +22,7 @@ export class CoursesComponent implements OnInit {
   }
 
   loadcourses() {
-    this.courseService.getCourses()
-      .subscribe(
-        data => {
-          this.courses = data;
-          console.log(data)
-        }
-      )
+    this.courseService.getCourses().subscribe(data => this.courses = data);
   }
 
   onClick(id: number) {

@@ -1,12 +1,10 @@
-import { Student } from 'src/app/models/Student';
+import { Student } from 'src/app/shared/models/Student';
 import { StudentService } from './../../admin/services/student.service';
 import { ValidatorService } from './../../admin/services/validator.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Validator } from 'src/app/assets/Validators';
-import { waitForAsync } from '@angular/core/testing';
-import { delay } from 'rxjs/operators';
+import { Validator } from 'src/app/shared/Validators';
 
 @Component({
   selector: 'app-registration-student',
@@ -41,17 +39,13 @@ export class RegistrationStudentComponent implements OnInit {
   }
 
   createStudent(student: Student) {
-    this.studentService.getStudents()
-    .subscribe(data => {
-      student.id = data.length + 1;
-      this.studentService.createStudent(student)
-      .subscribe(
-        success => {
-          this.route.navigate(['cursos']);
-        },
-        error => console.error()
-        );
-    });
+    this.studentService.createStudentPending(student)
+    .subscribe(
+      success => {
+        this.route.navigate(['cursos']);
+      },
+      error => console.error()
+      );
   }
 
   getFormControl(id: string) {

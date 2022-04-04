@@ -8,69 +8,6 @@
       "email": "anajulia@email.com",
       "password": "aluno-123456",
       "id": 1
-    },
-    {
-      "name": "Yasmin Alves da Silva",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "yasilvalves@gmail.com",
-      "id": 2
-    },
-    {
-      "name": "Yasmin Alves da Silva",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "yasilvalves@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "Yasmin Alves da Silva",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "yasilvalves@gmail.com",
-      "id": 4
-    },
-    {
-      "name": "Yasmin Alves da Silva",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "yasilvalves@gmail.com",
-      "id": 5
-    },
-    {
-      "name": "Yasmin Alves da Silva",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "yasilvalves@gmail.com",
-      "id": 6
-    },
-    {
-      "name": "Ana Júlia",
-      "age": "10",
-      "contact": "(99) 99999-9999",
-      "email": "anajulia@email.com",
-      "id": 7
-    },
-    {
-      "name": "Ana Júlia",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "anajulia@email.com",
-      "id": 8
-    },
-    {
-      "name": "Yasmin Alves da Silva",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "yasilvalves@gmail.com",
-      "id": 9
-    },
-    {
-      "name": "Ana Júlia",
-      "age": "12",
-      "contact": "(99) 99999-9999",
-      "email": "anajulia@email.com",
-      "id": 10
     }
   ],
   "professores": [
@@ -101,11 +38,11 @@
       "id": 1
     },
     {
-      "name": "Inglês básico e conversação",
-      "image": "https://unsplash.com/photos/g1Kr4Ozfoac",
-      "desc": "Expressões comuns, gramática básica e vocabulário para saber conversar em situações do cotidiano.",
-      "age": "entre 12 e 16 anos",
-      "teacher": "Prof. Ana",
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
       "id": 2
     },
     {
@@ -156,5 +93,6 @@
       "teacher": "Prof. João",
       "id": 8
     }
-  ]
+  ],
+  "pending": []
 }

@@ -13,16 +13,4 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick() {
-    this.router.navigate(['login']);
-  }
-
-  onClick2() {
-    this.router.navigate(['login/aluno']);
-  }
-
-  onClick3() {
-    this.router.navigate(['login/professor']);
-  }
-
 }

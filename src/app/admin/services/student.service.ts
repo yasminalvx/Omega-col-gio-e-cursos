@@ -1,10 +1,8 @@
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError, take } from 'rxjs/operators';
-import { Student } from 'src/app/models/Student';
-import { getLocaleDayPeriods } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { retry, take } from 'rxjs/operators';
+import { Student } from 'src/app/shared/models/Student';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +20,13 @@ export class StudentService {
       )
   }
 
+  getStudentsPending() {
+    return this.httpClient.get<Student[]>(environment.API + 'pending')
+      .pipe(
+        retry(2)
+      )
+  }
+
   getStudentById(id: number) {
     return this.httpClient.get<Student>(this.API + '/' + id)
       .pipe(
@@ -33,6 +38,10 @@ export class StudentService {
     return this.httpClient.post(this.API, student).pipe(take(1));
   }
 
+  createStudentPending(student: Student) {
+    return this.httpClient.post(environment.API + "pending", student).pipe(take(1));
+  }
+
   updateStudent(student: Student) {
     return this.httpClient.put<Student>(this.API + '/' + student.id, student)
     .pipe(
@@ -42,6 +51,13 @@ export class StudentService {
 
   deleteStudent(id: Number) {
     return this.httpClient.delete<Student>(this.API + '/' + id)
+    .pipe(
+      retry(1)
+    )
+  }
+
+  deletePending(id: Number) {
+    return this.httpClient.delete<Student>(environment.API + 'pending' + '/' + id)
     .pipe(
       retry(1)
     )

@@ -1,6 +1,6 @@
-import { Student } from './../../models/Student';
-import { Teacher } from './../../models/teacher';
-import { Admin } from 'src/app/models/admin';
+import { Student } from '../../shared/models/Student';
+import { Teacher } from '../../shared/models/teacher';
+import { Admin } from 'src/app/shared/models/admin';
 import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';

@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
+  isLogin: boolean = false;
+
   constructor (private router: Router) {}
 
   ngOnInit() {
@@ -33,5 +35,25 @@ export class AppComponent {
     return localStorage.getItem('typeAccount') == 'teacher';
   }
 
+  onClick() {
+    this.router.navigate(['login']);
+  }
+
+  onClick2() {
+    this.router.navigate(['login/aluno']);
+  }
+
+  onClick3() {
+    this.router.navigate(['login/professor']);
+  }
+
+  onLogout(){
+    localStorage.clear();
+    alert('Você foi desconectado');
+  }
+
+  changeLogin(){
+    this.isLogin = !this.isLogin;
+  }
 
 }

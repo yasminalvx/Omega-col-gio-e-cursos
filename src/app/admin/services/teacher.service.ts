@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Teacher } from 'src/app/models/teacher';
+import { Teacher } from 'src/app/shared/models/teacher';
 import { environment } from 'src/environments/environment';
 import { retry, catchError, take } from 'rxjs/operators';
 
