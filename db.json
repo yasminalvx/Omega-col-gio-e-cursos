@@ -1,0 +1,98 @@
+{
+  "alunos": [
+    {
+      "name": "Ana Júlia",
+      "age": "1",
+      "contact": "(83) 99999-9999",
+      "date": "2018-02-05",
+      "email": "anajulia@email.com",
+      "password": "aluno-123456",
+      "id": 1
+    }
+  ],
+  "professores": [
+    {
+      "name": "Prof. João",
+      "contact": "(83) 99999-9999",
+      "email": "joao@email.com",
+      "password": "123456789",
+      "id": 1
+    }
+  ],
+  "admin": [
+    {
+      "name": "Adm master",
+      "contact": "(99) 99999-9999",
+      "email": "adm-master@gmail.com",
+      "password": "admin-123456",
+      "id": 1
+    }
+  ],
+  "cursos": [
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 1
+    },
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 2
+    },
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 3
+    },
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 4
+    },
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 5
+    },
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 6
+    },
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 7
+    },
+    {
+      "name": "Curso de pintura infantil",
+      "image": "https://unsplash.com/photos/OV44gxH71DU",
+      "desc": "Matricule seu filho para desenvolver suas habilidades com pintura enquanto se diverte.",
+      "age": "entre 4 e 6 anos",
+      "teacher": "Prof. João",
+      "id": 8
+    }
+  ],
+  "pending": []
+}
