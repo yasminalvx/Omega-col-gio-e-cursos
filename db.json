@@ -8,15 +8,56 @@
       "email": "anajulia@email.com",
       "password": "aluno-123456",
       "id": 1
+    },
+    {
+      "name": "Yasmin Alves",
+      "age": "10",
+      "contact": "(99) 99999-9999",
+      "date": "2004-06-05",
+      "email": "yasilvalves@gmail.com",
+      "password": "12345612",
+      "id": 2
+    },
+    {
+      "name": "Ana Ana",
+      "age": "8",
+      "contact": "(99) 99999-9999",
+      "date": "2004-06-05",
+      "email": "ana@email.com",
+      "password": "2222222222",
+      "id": 3
+    },
+    {
+      "name": "Matheus",
+      "age": "14",
+      "contact": "(99) 99999-9999",
+      "date": "2004-04-03",
+      "email": "matheus@gmail.com",
+      "password": "123456789",
+      "id": 4
     }
   ],
   "professores": [
     {
-      "name": "Prof. João",
+      "name": "Prof. José",
       "contact": "(83) 99999-9999",
-      "email": "joao@email.com",
+      "email": "joao2@email.com",
       "password": "123456789",
       "id": 1
+    },
+    {
+      "name": "Prof. Ana",
+      "contact": "(99) 99999-9999",
+      "email": "ana@email.com",
+      "password": "aaaaaaaa",
+      "id": 2
+    },
+    {
+      "name": "Yasmin Alves da Silva",
+      "contact": "(99) 99999-9999",
+      "email": "yasilvalves@gmail.com",
+      "password": "12345678",
+      "id": 3
     }
   ],
   "admin": [

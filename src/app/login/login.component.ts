@@ -34,8 +34,8 @@ export class LoginComponent implements OnInit {
       const password = this.form.value.password;
 
       switch (this.router.url) {
-        case '/login': this.login(email, password, 'admin', 'alunos'); break;
-        case '/login/aluno': this.login(email, password, 'student', ''); break;
+        case '/login': this.login(email, password, 'admin', 'admin'); break;
+        case '/login/aluno': this.login(email, password, 'student', 'cursos'); break;
         case '/login/professor': this.login(email, password, 'teacher', 'alunos'); break;
       }
     }

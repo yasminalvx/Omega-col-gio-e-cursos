@@ -39,10 +39,10 @@ export class AdminComponent implements OnInit {
 
   createStudent(student: Student, id: number) {
     this.studentService.createStudent(student).subscribe(
-      sucess => this.router.navigate([`alunos/edit/${id}`]),
+      sucess => this.router.navigate([`alunos/edit/${student.id}`]),
       error => console.error
     );
-    this.studentService.deletePending(student.id).subscribe();
+    this.studentService.deletePending(id).subscribe();
   }
 
   onLogout() {
